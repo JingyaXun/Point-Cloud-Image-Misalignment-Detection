@@ -4,7 +4,7 @@ import math
 import cv2
 import os
 
-data_path = "final_project_data/"
+data_path = "../final_project_data/"
 EQUATORIAL_R = 6378137.0
 POLAR_R = 6356752.3
 
@@ -73,7 +73,7 @@ def enu2cam(coord_east, coord_north, coord_up, cam_qs, cam_qx, cam_qy, cam_qz):
 def cam2img(cam_x, cam_y, cam_z):
     x_i, y_i, direction = 0, 0, 0
     a = (resolution - 1)/2
-    b = (resolution + 1)/2)
+    b = (resolution + 1)/2
     # "front" face
     if cam_z > 0 and cam_z > abs(cam_x) and cam_z > abs(cam_y):
         x_i = int(cam_y/cam_z*a+b)
